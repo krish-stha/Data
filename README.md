@@ -7,4 +7,6 @@ This repository will contain all the activities I undertake to acquire new skill
 
 **Day 3:** I reviewed all the knowledge I had gained in the past two days and created another project using online resources. I also planned to focus on SQL on the fourth day. Since I’m already familiar with MySQL, this should make the learning process smoother.
 
-Day 4: Today, I completed all the basic to advanced SQL tutorials and worked on a project that involved performing operations on SQL data. Some of the topics I covered include: GROUP BY, ORDER BY, creating stored procedures, using UNION, string and window functions, subqueries, temporary tables, CTEs, and many more concepts.
+**Day 4:** Today, I completed all the basic to advanced SQL tutorials and worked on a project that involved performing operations on SQL data. Some of the topics I covered include: GROUP BY, ORDER BY, creating stored procedures, using UNION, string and window functions, subqueries, temporary tables, CTEs, and many more concepts.
+
+**Day 5:**  On Day 5, I implemented all the queries and functions that I learned on Day 4 to build a solid project. I focused on cleaning the data as thoroughly as possible by removing duplicates, standardizing the data, handling or manipulating null or blank spaces, and removing unnecessary rows or columns to ensure the data was as clean as possible.
