@@ -109,8 +109,8 @@ select distinct country, trim( trailing '.' from country) from layoffs_staging2 
 
 -- changing the datat types text to date to the date column
 
-select `date`, str_to_date(`date`,'%m/%d/%Y') as date_format
-from layoffs_staging2;
+select `date`, str_to_date(`date`,'%Y-%m-%d') as date_format
+from world_layoffs.layoffs_staging2;
 
 update layoffs_staging2 set `date`=str_to_date(`date`,'%m/%d/%Y');
 
