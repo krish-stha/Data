@@ -1,0 +1,107 @@
+Relating Databases
+
+-Multiple Tables
+'.tables' to know how many tables are there in a sqlite3.
+
+Redundancy (Repetition) problem when the data is stored in one table.
+
+Relationship
+-One to One. For eg: One author writes One book
+-One to Many. For eg: One author write many books
+-Many to Many: For eg: one books is written by many author or many author writes one book
+
+Crows feet Realationship Symbol.
+
+KEYS
+ISBN Or primary key- It should be Unique
+Foreign Key- If the primary key is used in another table, then it is a foreign key for another table.
+
+SUB-QUERIES ( A query within a query)
+For EXAMPLE
+SELECT "id" FROM "publishers" WHERE "publisher"='MacLehose Press';
+SELECT "title" FROM "books" WHERE "publiser_id"=( 
+SELECT "id" FROM "publishers" WHERE "publisher"='MacLehose Press');
+
+Another:
+SELECT "id" FROM "books" WHERE "title"='In Memory of Memory'
+SELECT "rating" FROM "Ratings" Where "id"=
+		(SELECT "id" FROM "books" WHERE "title"='In Memory of Memory');
+
+Another: (Avg rating)
+SELECT "id" FROM "books" WHERE "title"='In Memory of Memory'
+SELECT AVG("rating") FROM "Ratings" Where "id"=
+		(SELECT "id" FROM "books" WHERE "title"='In Memory of Memory');
+
+In terms of Many to Many relationship:
+
+'=' (in sub queries is used to know the particular value)
+Select "id" from books where "title"='Flights'
+Select "author_id" from authored where "book_id"=
+		(Select "id" from books where "title"='Flights')
+-The combination of both above two query make this below query.
+select "name" from authors WHERE "id"=(
+	Select "author_id" from authored where "book_id"=
+		(Select "id" from books where "title"='Flights'));
+'In' Keyword:(if more than one id)
+SELECT "title" FROM "books" WHERE "id" IN (
+			SELECT "book_id" from "authored" Where "author_id"=( 
+				SELECT "id" From "authors" WHERE "name"='Fernanda Melchor'))
+'.quit' to get out of terminal.
+'Join' Keyword:
+SELECT * FROM "sea_lions" 
+JOIN "migrations" on "sea_lions"."id"="migrations"."id";(by default - it is a inner join)
+(outer-join)
+Left Join-
+Select * from "sea_lions" left join "migrations" on "sea_lions"."id"="migrations"."id";
+
+Right Join-
+Select * from "sea_lions" Right join "migrations" on "sea_lions"."id"="migrations"."id";
+
+Full join-
+
+Select * from "sea_lions" Full join "migrations" on "sea_lions"."id"="migrations"."id";
+
+Natural join: does not need to specify the primary key and forign key. it identifies itself
+
+Sets:
+intersects- Example
+select "name" from translator intersect select "name" from author
+Union(Either)- Example
+select "name" from translator union select "name" from author
+another best way:
+select 'author' as "profession" ,"name" from "authors" Union select 'translator' as "profession" ,"name" from "translator" 
+Except(only)
+-only translator
+select "name" from translator except select "name" from author
+
+Group BY:
+
+Select "book_id" , round(AVG("ratings"),2) as average_rating from "ratings" Group by "book_id" HAVING average_rating>4; ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
