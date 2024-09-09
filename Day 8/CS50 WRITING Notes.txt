@@ -1,0 +1,115 @@
+ CS50 WRITING 
+
+#INSERT
+
+INSERT INTO Table_name ("") VALUES("");
+SELECT * from Table_name;
+
+CREATE TABLE table name(
+id integer primary key auto increment- it will provide its own unique id automatically. if the auto increment is not mentioned , it is still going to increment it by default if we try to insert without id.
+
+we can insert multiple at a time.
+INSERT INTO Table_name ("") VALUES(""),(""),("");-like this
+
+.import keyword in sqlite3
+- sqlite > .import --csv --skip 1 mfa.csv(file name) collections(table name)
+.import --csv mfs.csv temp - it crates a temporary table and then we add to our orginal table if the number of column is mismatched. (specially when the primary key is missing)
+
+insert into "collections" ("title","accession_number","acquired")
+select * from temp; in this way we can achieve all the data with the primary key.
+
+By importing from csv there is a downside that it wont check for null and makes it all text.
+
+#DELETE
+
+DELETE FROM TABLE WHERE CONDITION ;
+DELETE FROM TABLE ; -- it will delete all the rows present in the table
+DELETE FROM "collections" WHERE "acquired">"1909-01-01';
+
+Foreign key constraints- if primary key is delete and the foreign key have no reference to take about.
+FOR EXAMPLE:
+
+DELETE FROM "artists" from artists where "name" like 'unidentified%'; - it will cause foreign key constraint error as it is referenced by other column in other table
+DELETE FROM "created" from "artist_id"=(select "id" from "artists" where "name" like "unidentified%";-- now there is no reference to the 'unidentified artist', so we can delete it.
+DELETE FROM "artists" from artists where "name" like 'unidentified%'; 
+
+
+FOREIGN KEY("artist_id") REFERENCES "artists"("id")- we have several option to use given below
+1) on delete restrict
+2) on delete no action
+3) on delete set null
+4) on delete set cascade- if i delete the primary key, it will delete the reference to (it is useful)
+5) on delete default
+
+#Update
+
+update "created" set "artist_id"=("select "id" from "artists" where "name"='lin yin') where "collection_id"=(select "id" from "collections" where "title" ='Farmers working at dawn');
+
+.import --csv votes.csv votes (to copy the csv file into the table votes) 
+
+trim keyword( remove the white space)
+update "votes" set "title" =trim("title");
+upper keyword:
+update "votes" set "title"=upper("title")
+
+-Trigger
+if i delete in a collection then it automatically record in a transaction as a sold. it can be done through using trigger.
+if i insert into collection then it automatically record in a transaction as a bought.
+
+Syntax
+
+CREATE TRIGGER name
+BEFORE INSERT ON or DELETE ON or UPDATE ON table
+FOR EACH ROW
+BEGIN
+	QUERY
+END
+
+Lets try to implement :
+First of all:
+CREATE TABLE "transactions"(
+"id" integer,
+"title" action,
+"action" TEXT,
+primary key("id")
+)
+
+WE HAVE CREATED A TABLE CALLED TRANSACTION, now we implement trigger
+
+CREATE TRIGGER "sell"
+BEFORE DELETE ON "collections"
+FOR EACH ROW
+BEGIN 	
+	INSERT INTO "transaction" ("title","action")
+	VALUES(old."title","sold");
+END; --- it is a part of schema
+
+DELETE FROM "collections" where "title"='Farmers working at dawn'; if i delete this then it should be inserted into transactions.
+select * from "transactions"; then the info is added into transaction
+
+Now lets have an action of bought:
+
+Create trigger "buy" -- if i insert something in collection then it will be automatically added into transaction
+After insert on "collections" 
+For each row
+Begin
+Insert into "transactions" ("title","action")
+VALUES (new."title",'bought');
+END;
+
+
+# SOFT DELETION- not quite fully deleted (it can be implacable by using a deleted column that indicates if 0 it is not deleted and if I update 0 to 1 then it means deletd but it is still in the table.
+
+Alter table "collections" Add column "deleted" Integer Default 0; - it adds the deleted column to the collections, all default. if i need to delete then i will update 0 to . it is known as soft deletion.
+I
+
+
+
+
+
+
+
+
+
+
+
