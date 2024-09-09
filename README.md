@@ -21,3 +21,5 @@ ws Cube Tech: https://www.youtube.com/watch?v=zZpMvAedh_E
 **Day 7: **Today, I completed Lesson 2, "Relating Databases," in the CS50: Introduction to Database with SQL course. Alongside this, I submitted three projects—two from Problem Set 0 and one from Problem Set 1. Working on these projects helped me deepen my understanding of subqueries and other SQL keywords, enhancing my practical knowledge.
 **Resource**
 cs50 course:https://learning.edx.org/course/course-v1:HarvardX+CS50SQL+SQL/home
+
+**Day 8:**Today, I completed 3 projects from Week 2 and 1 project from Week 1 of the CS50: Introduction to SQL course. Additionally, I finished 2 lessons titled "Designing" and "Writing." I have also compiled a list of important concepts I learned, which I have saved in a text file from Day 8.
