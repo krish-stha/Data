@@ -17,3 +17,7 @@ cs50 course:https://learning.edx.org/course/course-v1:HarvardX+CS50SQL+SQL/home
 Yt: https://www.youtube.com/watch?v=VFIuIjswMKM
 Alex the analyst: https://www.youtube.com/watch?v=4UltKCnnnTA
 ws Cube Tech: https://www.youtube.com/watch?v=zZpMvAedh_E
+
+**Day 7: **Today, I completed Lesson 2, "Relating Databases," in the CS50: Introduction to Database with SQL course. Alongside this, I submitted three projects—two from Problem Set 0 and one from Problem Set 1. Working on these projects helped me deepen my understanding of subqueries and other SQL keywords, enhancing my practical knowledge.
+**Resource**
+cs50 course:https://learning.edx.org/course/course-v1:HarvardX+CS50SQL+SQL/home
