@@ -1,0 +1,236 @@
+CS50-SCALING Notes
+
+What do you mean by scability:
+ability to increase or decrease capacity to meet demand
+
+MySQL and PostgreSQL- it requires server
+
+MBTA Database
+
+command to active MySQL - MySQL -u root -h 127.0.0.1 -P 3306 -p ENTER and enter password.
+SHOW DATABASES;(it have default database in MySQL)
+
+CREATE DATABASE mbta;
+SHOW DATABASES;
+USE mbta;
+
+DATA TYPES size(in Bytes)
+TINYINT      1               
+SMALLINT     2
+MEDIUMINT    3
+INT          4
+BIGINT       8
+
+CREATE TABLE cards(
+id int AUTO_INCREMENT,
+primary key(id)
+);
+
+SHOW TABLES; (similar to .schema in sqlite3)
+DESCRIBE cards;(to view the table's column data type, null value, default, key and extra)
+
+STRINGS IN MYSQL (CHAR- (FIXED WITH STRING ) , VARCHAR, TEXT (good for longer String),BLOB,ENUM(possible option like for gender M and F- only one ),SET(like enum but choose more options))
+
+CREATE TABLE stations(
+id int auto_increment,
+name varchar(32) NOT NULL UNIQUE,
+line ENUM('blue','green','orange','red') NOT NULL,
+primary key(id)
+)
+
+SHOW TABLES; (similar to .schema in sqlite3)
+DESCRIBE stations;(to view the table's column data type, null value, default, key and extra)
+
+MYSQL(datetime feature)
+DATE
+TIME
+DATETIME
+TIMESTAMP (precise)
+YEAR
+
+REAL NUMBERS (FLOAT-store in 4 byte, DOUBLE PRECISION-store in 8 byte)
+DECIMAL(M,D) FOR Eg- DECIMAL(5,2)- 999.99 ,5 means total number of length,2 means the digit after point
+
+CREATE TABLE swipes(
+id int auto_increment,
+card_id int,
+station_id int,
+type ENUM('enter','exit','deposit') NOT NULL,
+datetime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+amount DECIMAL(5,2) NOT NULL CHECK(amount !=0),
+primary key(id),
+foreign key(card_id) references cards(id),
+foreign key(station_id) references stations(id)
+)
+
+ALTER TABLE(MORE POWERFUL THAN  SQLITE3)
+
+ALTER TABLE stations
+MODIFY line ENUM('blue','green','orange','red','silver') NOT NULL;
+
+#Procedure
+CREATE PROCEDURE name
+BEGIN
+Query 
+END
+
+FOR EXAMPLE:
+
+use mfa;
+show tables;
+describe collections;
+DELETE COLUMN IS MISSING;
+
+ALTER TABLE 'collections'
+ADD COLUMN 'deleted' TINYINT DEFAULT 0;
+
+DECRIBE COLLECTION; (OUR DELETE COLUMN IS ADDED)
+
+changing delimiter:
+
+DELIMITER //
+CREATE PROCEDURE current_collection()
+BEGIN 
+SELECT title,accession_number,acquired
+FROM collection where 'deleted'=0;
+END //
+DELIMITER ;
+
+CALL current_collection();
+
+UPDATE collection set deleted=1 
+where title='farmer working at dawn';
+
+CREATE TABLE transactions(
+id int auto_increment,
+title varchar(64) not null,
+action Enum('bought','sold') NOT NULL,
+primary key(id)
+)
+
+NEXT EXAMPLE WITH PARAMETER:
+
+DELIMITER //
+
+CREATE PROCEDURE sell(IN `sold_id` INT) -- in means input
+BEGIN
+UPDATE collections SET deleted=1
+WHERE id = sold_id;
+INSERT INTO transactions(title,action)
+VALUES((select title from collection where id=sold_id),sold)
+END //
+DELIMITER ;
+
+CALL sell(2);
+
+# stored procedure is familiar with( if, else if, else, loop, repeat, while)
+
+## PostgreSQL- NEW LANGUAGE
+TO connect - PostgreSQL://pstgres@127.0.0.1:5432/postgres and then it will ask for password.
+only have smallint,int nad bigint.
+SMALLSERIAL,SERIAL (automatically increment and good for primary key),BIGSERIAL
+
+CREATE DATABASE "mbta";\
+\l to see the database
+\c "mbta"-database name to (GO to database)
+
+CREATE TABLE "cards"(
+"id" SERIAL,
+PRIMARY KEY ("id");
+);
+
+\dt - to check the table
+
+CREATE TYPE "swipe_type" AS ENUM ('enter','exit','deposit')--creating our own types.
+
+TIMESTAMP(p)- p means precision
+DATE
+TIME(p)
+Interval(p)
+NUMERIC(precision,scale)-similar to decimal in sql
+MONEY (include dollar sign and many more)
+
+CREATE TABLE "swipes"(
+"type" "swipe_type" NOT NULL,
+"datetime" TIMESTAMP NOT NULL DEFAULT now(),
+"amount" NUMERIc(5,2) NOT NULL CHECK("amount!0)
+
+\q  to exit
+
+##BACK TO MYSQL
+
+VERTICAL SCALING( increasing capacity by increasing a server's computing power)
+Horizontal scaling(increasing capacity by distributing load across multiple server)
+REPLICATION(Keeping copies of a database on multiple servers)
+-single leader(single database server)
+-multi leader(multiple server)
+-leaderless
+
+# leader and follower (leader shares and communicate with the follower)
+# Read RepLica( A copy of a database from which data may only be read)
+
+# option for communication between leader and follower
+SYNCHRONOUS (always in sync, wait for the follower to get the data and the leader provide to client, consume more time)
+ASYNCHRONOUS(leader doesnot wait for follower, simultaneously ask for follower to photo and if leader has it, leader provide it to the client)-DATA INCONSISTENT, risk of data loss
+
+#Sharding(it is great for large database)- separating or splitting the database on different servers with its own properties.- to reduce workload
+without replication sharding is not usefull, if one split is crashed, we cannot have the copy data.
+
+#Access Control(creating new user in MySQL instead of root)
+in mysql> CREATE USER 'carter' IDENTIFIED BY 'password';
+(open new terminal)
+mysql -u carter -h 127.0.0.7 -p 3306 -p ENTER
+ENTER PASSWORD: password
+
+(BACK TO ROOt)
+SELECT * FROM rides;
+
+(SYNTAX)
+GRANT privilege to user; (grant access)
+Revoke privilege FROM user; (removing access)
+
+privilege we can use- (all, create,insert,select,update,delete)
+
+GRANT SELECT ON rideshare.analysis to 'carter';
+
+show database ; (in carter database)
+show table;
+select * from analysis: (we can do select statement but we cannot do any other permission)
+
+#SQL injection ATTACK
+SHOW DATABASE; (bank.db)
+use bank;
+show tables;(account table)
+select * from accounts;
+select * from accounts where id=1;
+
+select * from accounts 
+where id=1 
+UNION 
+SELECT * from accounts;
+
+
+## PREPARED STATEMENTS ( way to prevent the attack)
+(SYNTAX)
+prepare name from statement;
+
+for example:
+
+PREPARE balance_check
+FROM `select * from accounts`
+where id=?;
+
+SET @id=1; (declaring variable)
+EXECUTE balance_check USING @id;
+
+# preventing the attack as there is only one placeholder i.e ?, and they dont get run
+SET @id='1 UNION select * from accounts`
+EXECUTE balance_check using @id;
+
+
+
+
+
+
+
+
