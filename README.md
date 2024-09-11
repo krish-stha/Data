@@ -24,5 +24,6 @@ cs50 course:https://learning.edx.org/course/course-v1:HarvardX+CS50SQL+SQL/home
 
 **Day 8:**Today, I completed 3 projects from Week 2 and 1 project from Week 1 of the CS50: Introduction to SQL course. Additionally, I finished 2 lessons titled "Designing" and "Writing." I have also compiled a list of important concepts I learned, which I have saved in a text file from Day 8.
 
-
 **Day 9:**"On Day 9, I completed the 'Viewing and Optimizing' lesson of CS50: Introduction to Databases with SQL. I learned several important concepts, including CTEs, VIEWs, and transactions. As part of the course, I also submitted solutions to two problems, each based on a different dataset. All the relevant details, including my notes on 'Viewing and Optimizing,' are available in the Day 8 folder on my GitHub."
+
+**Day 10:** On Day 10 of learning, I completed the CS50 Introduction to Database with SQL course. I focused on scaling databases, creating stored procedures, and gained knowledge about PostgreSQL and MySQL. I also submitted five problem set questions. On Day 11, I am progressing to the project phase and working on additional problem sets from the course.
