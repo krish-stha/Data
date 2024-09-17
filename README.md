@@ -29,3 +29,5 @@ cs50 course:https://learning.edx.org/course/course-v1:HarvardX+CS50SQL+SQL/home
 **Day 10:** On Day 10 of learning, I completed the CS50 Introduction to Database with SQL course. I focused on scaling databases, creating stored procedures, and gained knowledge about PostgreSQL and MySQL. I also submitted five problem set questions. On Day 11, I am progressing to the project phase and working on additional problem sets from the course.
 
 **Day 11**:On day 11, I reviewed all the lessons I had learned over the past few days and submitted all the problem sets for the CS50: Introduction to Database with SQL course.
+**Day 12:**On day 12, I started learning Excel for data analysis through online resources. Today, I focused on five key aspects essential for data analysis: pivot tables, various formulas (such as MIN, MAX, LEN, LEFT, CONCATENATE, and SUBSTRING), XLOOKUP, conditional formatting, and charts.
+      Resource:https://www.youtube.com/watch?v=gMAHXrty6wI
