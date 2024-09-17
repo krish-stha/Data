@@ -1,0 +1,61 @@
+EXCEL TUTORIAL
+
+1) ABOUT PIVOT TABLE 
+
+A PivotTable is a powerful tool to calculate, summarize, and analyze data that lets you see comparisons, patterns, and trends in your data.
+
+Creating a pivot table of the sales.csv in a new worksheet
+
+Exapand and collapse in the right click.
+1) Revenue based on state within a country.
+2) Value Field Settings by right click on the values. By doing this we can use avg, max min ,count , sum, percentage by grand total etc
+3) Calculate field to add a new column (Revenue-cost)=profit of the product
+4) Filter (for eg based on male or female)
+5) In another pivot table, revenue by each country through out the year in a new sheet.
+
+2) Formulas in Excel
+EVERY FORMULA NEED TO HAVE = sign at the beginning
+	1) Max-min
+	2) IF(true or false)-IFs(only true condition)
+	3) Len (used to check the length of phone number or social security number etc)
+	4) Left-Right(Like a substring)- used to extract year from FULL DATE
+	5) Date to Text ( By converting to text, we can use right and left)
+	6) TRIM -USED TO REMOVE WHITE SPACES
+	7) Concatenate- JOINS TWO STRING
+	8) SUBSTITUTE- changing a specific word or symbol to another one.like changing 2004/01/12 to 2004-01-12
+		1) 1 instance means only change the first symbol or word
+		2) 2 instance means change the second word or symbol after a first one (unchanged)
+	9) SUM
+	   SUMIF- check the condition and sum the true one
+	   SUMIFS- checks multiply condition and add them
+	10)COUNT
+	   countIF
+	   countIfs
+	11) DAYS(not gonnna work in date format, work in text only)- tell us number of days after inserting the start and end date
+	    NetworkDays-similar like days, but it doesnot include holidays and weekends
+
+3) XLOOKUP
+It contains 6 parameter with three optional that includes lookup value, lookup array and return array etc
+	1) xlook up multiple row- return multiple row and store in another multiple row. but it should be next to each other
+	For eg=XLOOKUP(A3,I2:I10,O2:P10)O2:P10- contains the email and end date both.
+	2) Xlook up exact match-if not found, we can give not found in that cell.There are modes such as wildcard character,exact match or 	smaller etc. For eg =XLOOKUP(A6&"*",H4:H12,O4:O12,"Not FOUND",2)-* means any thing after A6, 2 means match mode i.e wildcard
+	Another example. next larger and smaller are used in case of numeric value.For eg. =XLOOKUP(A3,N2:N10,I2:I10,,1) in xLookup Search 	order sheet
+	3) Search order- it specifies in which mode we are searching like linear(first to last or visa vera), binary(ascending or 	descending).
+	4)Xlook up Horizontal
+	5)VlookUp- if you insert a column after vlook up operation, it will provide wrong info which is one of the drawbacks.
+		   The lookup array is replaced by table array where we need to specify a set of columns.
+
+4) Conditional Formatting
+1) Icon sets- used to identify the trends in the data
+2)color scales- define the color according to high to low rates.
+3)Data bars- make bar to each cell
+4)Top/Button Rules(below average, abover average,top 10 etc)
+5)Highlight cells(Duplicate values)
+6)Text that contains(highlight the text)
+7)Manage rules -> use a formula to determine which cells to format(Do not use $-remove it)
+
+4) CHARTS IN EXCEL
+	1)Bar Graphs
+
+
+
