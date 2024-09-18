@@ -1,0 +1,27 @@
+DATA CLEANING
+
+1) Removing Duplicates
+-DATA -> Remove Duplicates
+
+
+2) Proper Case
+3)Trim
+4) Change currency to Number
+5) Short Date
+
+#project
+
+Creating a Working sheet (copy paste the raw data into working sheet.)
+Creating a dashboard sheet
+Creating a pivot table sheet
+
+Remove Duplicates
+Replace name M means male, f means female, S means single, M means Married
+Categories the Age
+Ceating a pivot Table
+Remove Gridlines in View
+
+Analysing the data and making a pivot table and making a chart
+
+And collecting them in the Dashboard Sheet
+
