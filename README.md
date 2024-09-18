@@ -31,3 +31,5 @@ cs50 course:https://learning.edx.org/course/course-v1:HarvardX+CS50SQL+SQL/home
 **Day 11**:On day 11, I reviewed all the lessons I had learned over the past few days and submitted all the problem sets for the CS50: Introduction to Database with SQL course.
 **Day 12:**On day 12, I started learning Excel for data analysis through online resources. Today, I focused on five key aspects essential for data analysis: pivot tables, various formulas (such as MIN, MAX, LEN, LEFT, CONCATENATE, and SUBSTRING), XLOOKUP, conditional formatting, and charts.
       Resource:https://www.youtube.com/watch?v=gMAHXrty6wI
+
+**Day 13:**On day 13 of my data analysis learning journey, I completed a data cleaning project and created a dashboard in Excel. This experience taught me a lot, from removing duplicates to generating various charts using pivot tables.
