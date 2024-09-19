@@ -33,3 +33,4 @@ cs50 course:https://learning.edx.org/course/course-v1:HarvardX+CS50SQL+SQL/home
       Resource:https://www.youtube.com/watch?v=gMAHXrty6wI
 
 **Day 13:**On day 13 of my data analysis learning journey, I completed a data cleaning project and created a dashboard in Excel. This experience taught me a lot, from removing duplicates to generating various charts using pivot tables.
+**Day 14**:On day 14 of my learning process, I started working on another Excel project focused on road accident analysis. I completed about half of the dashboard. On day 15, I plan to finish the project entirely.
