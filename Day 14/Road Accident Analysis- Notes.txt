@@ -1,0 +1,10 @@
+Road Accident Analysis -Project(excel)
+
+1)Data Cleaning (Checking the error, removing duplicates)
+2)Data Processing (adding Customization column)
+- we need Month for analysis = Text(B2,"mmm")
+For Year = TEXT(B2,"YYYY")
+3) Making Dashboard
+	-Total casulaties
+	-Percentage of serious casualities
+	-Grouping or combining data of vehicles type (calculated item in analyze tool bar after selecting item of  pivot table) and add them
