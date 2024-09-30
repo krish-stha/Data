@@ -1,0 +1,39 @@
+###PYTHON FOR DATA ANALYSIS
+
+
+----Downloading Anaconda for python
+--Lanching Jupyter Notebook and opening new python 3 kernel
+
+##Variables in Python
+-Container for storing value.
+It automatically assign data type unlike like other language
+it will automatically overwrite the variable with same name, it is case sensitive
+
+Naming of variable- camel case, pascal case, snake case(best way to use)
+
+
+##Data Types In PYTHON
+
+-Integer
+-String
+-List( We can store any data type in here)-It is Muttable
+-Tuple- It is immutable(cannot be modify)
+-Sets- No duplication 
+-Dictionaries- It store in a key value pair
+
+# Comparison Operator (==,=>,=<)
+#Logical Operator(and , or , not)
+#Membership Operator( in , not in)
+
+## If else statement in python
+# For Loop
+# While Loop
+# Function In Python
+-> def is a keyword to use
+-> Arguments and parameters
+->Arbitary Argument- if we dont know how many argument we need(*)
+->Keyword Argument
+->Arbitary keyword Argument- if we dont know how many keyword argument we need(**)
+
+# Converting data types(int,str,list,set)
+
