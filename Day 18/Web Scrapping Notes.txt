@@ -1,0 +1,33 @@
+
+
+
+## Automatic File Sorter in File Explorer
+
+importing os and shutil to work in File Explorer
+Copying the path
+os.listdir show all the file in that directory
+os.path.exists- checks whether the path is exist or not, return in Boolean
+shutil.move(,)- move one dir to another dir
+
+## Web Scrapping-
+Web scraping is the process of automatically mining data or collecting information from the World Wide Web.
+
+## Beautifulsoup and Requests
+from bs4 import BeautifulSoup
+import requests
+url='https://www.scrapethissite.com/pages/forms/'
+requests.get(url)
+BeautifulSoup(page.text,'html')-pulling the data into python from html
+
+## Find and Find_all-( It is used to search the specific tags of html)
+-text is only used in find only
+.strips for cleaning purposes
+
+# Project of web scrapping (Highest Company By revenue in United States)
+
+# importing Pandas
+df = p.DataFrame(columns=world_table_titles)
+print(df)
+
+-> length=len(df)
+   df.loc[length]=individual_row_data
