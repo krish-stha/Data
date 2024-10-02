@@ -19,6 +19,7 @@ Alex the analyst: https://www.youtube.com/watch?v=4UltKCnnnTA
 ws Cube Tech: https://www.youtube.com/watch?v=zZpMvAedh_E
 
 **Day 7: **Today, I completed Lesson 2, "Relating Databases," in the CS50: Introduction to Database with SQL course. Alongside this, I submitted three projects—two from Problem Set 0 and one from Problem Set 1. Working on these projects helped me deepen my understanding of subqueries and other SQL keywords, enhancing my practical knowledge.
+
 **Resource**
 cs50 course:https://learning.edx.org/course/course-v1:HarvardX+CS50SQL+SQL/home
 
@@ -29,13 +30,21 @@ cs50 course:https://learning.edx.org/course/course-v1:HarvardX+CS50SQL+SQL/home
 **Day 10:** On Day 10 of learning, I completed the CS50 Introduction to Database with SQL course. I focused on scaling databases, creating stored procedures, and gained knowledge about PostgreSQL and MySQL. I also submitted five problem set questions. On Day 11, I am progressing to the project phase and working on additional problem sets from the course.
 
 **Day 11**:On day 11, I reviewed all the lessons I had learned over the past few days and submitted all the problem sets for the CS50: Introduction to Database with SQL course.
+
 **Day 12:**On day 12, I started learning Excel for data analysis through online resources. Today, I focused on five key aspects essential for data analysis: pivot tables, various formulas (such as MIN, MAX, LEN, LEFT, CONCATENATE, and SUBSTRING), XLOOKUP, conditional formatting, and charts.
       Resource:https://www.youtube.com/watch?v=gMAHXrty6wI
 
 **Day 13:**On day 13 of my data analysis learning journey, I completed a data cleaning project and created a dashboard in Excel. This experience taught me a lot, from removing duplicates to generating various charts using pivot tables.
+
 **Day 14**:On day 14 of my learning process, I started working on another Excel project focused on road accident analysis. I completed about half of the dashboard. On day 15, I plan to finish the project entirely.
+
 **Day 15:**On day 15, I completed the project that was pending from day 14. I built a fully interactive dashboard and discovered many new features in Excel during the process.
+
 **Day 16:**On day 16, I completed another project where I created an interactive dashboard in Excel. This project helped me sharpen my data visualization skills and boosted my ability to build interactive, user-friendly dashboards.
+
 Day 17: On day 17, I revisited Python as part of my revision, having learned it previously. I covered fundamental topics such as variables, data types, loops, functions, and conditional statements, and even created a small project. Additionally, I used Anaconda to write code in Jupyter Notebook, which was a completely new experience for me.
 
 Day 18: On Day 18,I worked on two projects. The first involved creating an automatic file sorting system that categorizes files based on their type, such as PNG, JPG, CSV, XLSX, etc. The second project focused on web scraping, where I learned to use Beautiful Soup, requests, and pandas, along with the find and find_all methods, to extract data from a real website and export it into a CSV file for data analysis.
+
+Day 19: On day 19, I reviewed the web scraping topics from the previous day and successfully scraped two real-life tables from a website. Additionally, I focused on learning pandas, where I explored key concepts such as reading files of different formats, working with indexing, applying group by and aggregate functions, filtering data, and performing operations like merging, joining, and concatenating datasets.
+Resource: https://www.youtube.com/watch?v=TPivN7tpdwc
