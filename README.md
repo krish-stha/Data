@@ -50,3 +50,5 @@ Day 19: On day 19, I reviewed the web scraping topics from the previous day and 
 Resource: https://www.youtube.com/watch?v=TPivN7tpdwc
 
 Day 20: On day 20, I focused on expanding my knowledge of the pandas framework in Python. I delved into data visualization techniques using pandas, Matplotlib, and Seaborn. Additionally, I worked on a project that involved cleaning a customer call list, ensuring that the data was accurate and well-organized. Furthermore, I conducted exploratory data analysis (EDA) on a CSV file containing world population data, which helped me gain insights into population trends and distributions.
+
+Day 21: On day 21, I worked on a crypto API test notebook in Jupyter, focusing on data cleaning and visualization, where I identified patterns in the cryptocurrency market. I also created a portfolio website using HTML5UP templates, making minor modifications for better design.
