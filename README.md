@@ -55,3 +55,5 @@ Day 21: On day 21, I worked on a crypto API test notebook in Jupyter, focusing o
 
 Day 22: Today, I revised the Mysql and solve many easy and moderate level Question through the online website called analyst Builder. Some of the screenshot are present in the folder of day 22 in github.
 Resource:https://www.analystbuilder.com/
+
+Day 23: Today I have completed all the free questions of three difficulties level(easy,moderate and hard) from analystbuilder website.
